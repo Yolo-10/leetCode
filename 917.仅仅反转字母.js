@@ -32,5 +32,3 @@ var reverseOnlyLetters = function(s) {
     }
     return news
 };
-
-// @lc code=end

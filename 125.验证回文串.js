@@ -10,6 +10,7 @@
  * @return {boolean}
  */
 var isPalindrome = function(s) {
+
     n1 = s.toLowerCase().replace(/[^a-z0-9A-Z]/g, '')
         // s = s.toLowerCase();
         // for (let ch of s) {
