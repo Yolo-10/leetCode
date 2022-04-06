@@ -5,18 +5,18 @@
  * @return {number}
  */
 var movingCount = function(m, n, k) {
-    let visited = Array.from(Array(m), () => Array(n).fill(false));
+    let row = Math.max(m, n);
+    let col = Math.min(m, n);
 
-    let value = function(index) {
-        console.log(Math.floor(index / 10) + index % 10)
-        return Math.floor(index / 10) + index % 10;
+    let top = Math.min(row, k + 1);
+    let cnt = Math.min(col, k + 1);
+
+    let res = 0;
+
+    while (cnt--) {
+        res += top;
+        top--;
     }
 
-    let dfs = function(i, j) {
-        if (i > m || j > n || value(i) + value(j) > k || !visited) return 0;
-        visited[i][j] = true;
-        return (dfs(i + 1, j) + dfs(i, j + 1) + 1);
-    }
-
-    return dfs(0, 0);
+    return res;
 };
