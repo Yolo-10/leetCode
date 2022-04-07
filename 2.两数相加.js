@@ -16,7 +16,7 @@ var addTwoNumbers = function(l1, l2) {
         summy = 0;
     l3 = new ListNode();
     root = l3;
-    while (l1 != null || l2 != null || summy != 0) {
+    while (summy != 0 || l1 != null || l2 != null) {
         if (l1 == null) n1 = 0;
         else {
             n1 = l1.val;
